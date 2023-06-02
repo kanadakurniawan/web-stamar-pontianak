@@ -1,10 +1,40 @@
-<header id="header" data-fullwidth="true">
+<div id="topbar" class="dark topbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="top-menu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 d-none d-sm-block">
+                <div class="social-icons social-icons-colored-hover">
+                    <ul>
+                        <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="social-google"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="social-vimeo"><a href="#"><i class="fab fa-vimeo"></i></a></li>
+                        <li class="social-linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="social-dribbble"><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                        <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li class="social-rss"><a href="#"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header id="header">
     <div class="header-inner">
         <div class="container">
             <!--Logo-->
-            <div id="logo" >
-                <a href="index.html">
-                       <img style="height:80px;" alt="Stasiun Meteorologi Maritim Pontianak" src="{{ asset('images/logo-bmkg-maritim-pontianak-motto.svg') }}" class="logo-default py-3">
+            <div id="logo">
+                <a href="{{ route('beranda') }}">
+                    <img alt="Stasiun Meteorologi Maritim Pontianak" src="{{ asset('frontend/images/logo-bmkg-maritim-pontianak-motto.svg') }}" class="logo-default py-4">
                 </a>
             </div>
             <!--End: Logo-->
@@ -17,23 +47,6 @@
             </div>
             <!-- end: search -->
             <!--Header Extras-->
-            <div class="header-extras">
-                <ul>
-                    <li>
-                        <a id="btn-search" href="#"> <i class="icon-search"></i></a>
-                    </li>
-                    <li>
-                        <div class="p-dropdown">
-                            <a href="#"><i class="icon-globe"></i><span>EN</span></a>
-                            <ul class="p-dropdown-content">
-                                <li><a href="#">French</a></li>
-                                <li><a href="#">Spanish</a></li>
-                                <li><a href="#">English</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
             <!--end: Header Extras-->
             <!--Navigation Resposnive Trigger-->
             <div id="mainMenu-trigger">
@@ -45,152 +58,14 @@
                 <div class="container">
                     <nav>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li class="dropdown"><a href="#">Layout</a>
+                            <li class="dropdown"><a href="#">Profil</a>
                                 <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu"><a href="#">Topbar</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="header-topbar.html">Light</a></li>
-                                            <li><a href="header-topbar-dark.html">Dark</a></li>
-                                            <li><a href="header-topbar-transparent.html">Transparent</a></li>
-                                            <li><a href="header-topbar-colored.html">Colored</a></li>
-                                            <li><a href="header-topbar-fullwidth.html">Fullwidth</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a href="#">Header</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="header.html">Light</a></li>
-                                            <li><a href="header-dark.html">Dark</a></li>
-                                            <li><a href="header-transparent.html">Transparent</a></li>
-                                            <li><a href="header-fullwidth.html">Fullwidth</a></li>
-                                            <li class="dropdown-submenu"><a href="#">Modern</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="header-modern.html">Light</a></li>
-                                                    <li><a href="header-modern-dark.html">Dark</a></li>
-                                                    <li><a href="header-modern-transparent.html">Transparent</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="header-mini.html">Mini</a></li>
-                                            <li><a href="header-alternative.html">Alternative</a></li>
-                                            <li><a href="header-always-fixed.html">Always Fixed</a></li>
-                                            <li><a href="header-disable-fixed.html">Disable Fixed</a></li>
-                                            <li><a href="header-responsive-fixed.html">Responsive Fixed</a></li>
-                                            <li class="dropdown-submenu"><a href="#">Logo</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="header-logo.html">Left</a></li>
-                                                    <li><a href="header-logo-right.html">Right</a></li>
-                                                    <li><a href="header-logo-center.html">Center</a></li>
-                                                    <li><a href="header-logo-fixed-header.html">Header Fixed Logo</a></li>
-                                                    <li><a href="header-logo-responsive.html">Header Responsive Logo</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#">Menu Positions</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="header-menu-left.html">Left</a></li>
-                                                    <li><a href="header-menu-right.html">Right</a></li>
-                                                    <li><a href="header-menu-center.html">Center</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a href="#">Main Menu<span class="badge bg-danger">NEW</span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="menu.html">Default</a></li>
-                                            <li><a href="menu-lowercase.html">Lowercase</a></li>
-                                            <li><a href="menu-split.html">Split Menu</a></li>
-                                            <li><a href="menu-sub-title.html">Sub Title Menu</a></li>
-                                            <li><a href="menu-overlay.html">Overlay Menu</a></li>
-                                            <li><a href="menu-creative.html">Creative Menu</a></li>
-                                            <li><a href="menu-lines.html">Lines Menu</a></li>
-                                            <li class="dropdown-submenu"><a href="#">Outline</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="menu-outline.html">Default</a></li>
-                                                    <li><a href="menu-outline-dark.html">Dark</a></li>
-                                                    <li><a href="menu-outline-light.html">Light</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#">Rounded</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="menu-rounded.html">Default</a></li>
-                                                    <li><a href="menu-rounded-dark.html">Dark</a></li>
-                                                    <li><a href="menu-rounded-light.html">Light</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu"><a href="#">Positions</a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="menu-left.html">Left Aligned</a></li>
-                                                    <li><a href="menu-center.html">Center Aligned</a></li>
-                                                    <li><a href="menu-right.html">Right Aligned</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="menu-dots.html">Dots Menu</a></li>
-                                            <li><a href="menu-one-page.html">One Page Menu</a></li>
-                                            <li><a href="menu-hover-background.html">Hover Background</a></li>
-                                            <li><a href="menu-button.html">Button Version</a></li>
-                                            <li><a href="menu-social-icons.html">Social Icons Version</a></li>
-                                            <li><a href="menu-onclick.html">OnClick Open</a></li>
-                                            <li><a href="menu-rounded-dropdown.html">Rounded Dropdown</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a href="#">Page Title</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="page-title.html">Default</a></li>
-                                            <li><a href="page-title-image.html">Image background</a></li>
-                                            <li><a href="page-title-video.html">Video background</a></li>
-                                            <li><a href="page-title-particle.html">Particle animation</a></li>
-                                            <li><a href="page-title-pattern.html">Pattern background</a></li>
-                                            <li><a href="page-title-background-color.html">Colored background</a></li>
-                                            <li><a href="page-title-parallax.html">Parallax</a></li>
-                                            <li><a href="page-title-animated.html">Animated</a></li>
-                                            <li><a href="page-title-right.html">Right Aligned</a></li>
-                                            <li><a href="page-title-left.html">Left Aligned</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a href="#">Page Menu<span class="badge bg-danger">NEW</span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="page-menu.html">Default</a></li>
-                                            <li><a href="page-menu-sticky.html">Sticky</a></li>
-                                            <li><a href="page-menu-rounded.html">Rounded</a></li>
-                                            <li><a href="page-menu-outline.html">Outline</a></li>
-                                            <li><a href="page-menu-lines.html">Lines</a></li>
-                                            <li><a href="page-menu-solid.html">Solid</a></li>
-                                            <li><a href="page-menu-light.html">Light</a></li>
-                                            <li><a href="page-menu-dark.html">Dark</a></li>
-                                            <li><a href="page-menu-creative.html">Creative</a></li>
-                                            <li><a href="page-menu.html">Dropdown</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a href="#">Sidebars</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="sidebar-sticky.html">Sticky version</a></li>
-                                            <li><a href="sidebar.html">Left aligned</a></li>
-                                            <li><a href="sidebar-right.html">Right aligned</a></li>
-                                            <li><a href="sidebar-both.html">Both Sidebars</a></li>
-                                            <li><a href="sidebar-modern.html">Modern</a></li>
-                                            <li><a href="sidebar-modern-right.html">Modern Right</a></li>
-                                            <li><a href="sidebar-modern-both.html">Modern Both Sidebars</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a href="#">Footers</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="footer.html#footer">Default</a></li>
-                                            <li><a href="footer-dark.html#footer">Dark</a></li>
-                                            <li><a href="footer-1.html#footer">Footer 1</a></li>
-                                            <li><a href="footer-2.html#footer">Footer 2</a></li>
-                                            <li><a href="footer-3.html#footer">Footer 3</a></li>
-                                            <li><a href="footer-4.html#footer">Footer 4</a></li>
-                                            <li><a href="footer-5.html#footer">Footer 5</a></li>
-                                            <li><a href="footer-6.html#footer">Footer 6</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a href="#">Options</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="layout-boxed.html">Boxed</a></li>
-                                            <li><a href="layout-modern.html">Modern</a></li>
-                                            <li><a href="layout-frame.html">Frame</a></li>
-                                            <li><a href="layout-wide.html">Wide (default)</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="#">Sejarah</a></li>
+                                    <li><a href="#">Visi dan Misi</a></li>
+                                    <li><a href="#">Tugas dan Fungsi</a></li>
+                                    <li><a href="#">Logo dan Panji</a></li>
+                                    <li><a href="#">Struktur Organisasi</a></li>
+                                    <li><a href="#">Sumber Daya Manusia</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#">Features</a>
@@ -634,6 +509,9 @@
                                         </div>
                                     </li>
                                 </ul>
+                            </li>
+                            <li>
+                                <img style="height:80px;" alt="Stasiun Meteorologi Maritim Pontianak" src="{{ asset('frontend/images/berakhlak-bangga-melayani-bangsa.png') }}" class="logo-default py-4">
                             </li>
                         </ul>
                     </nav>

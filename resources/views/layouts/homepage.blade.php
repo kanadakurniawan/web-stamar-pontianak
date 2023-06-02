@@ -2,16 +2,16 @@
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="author" content="INSPIRO" />
-<meta name="description" content="Themeforest Template Polo, html template">
-<link rel="icon" type="image/png" href="images/favicon.png">
+<meta name="author" content="{{ env('NAMA_KANTOR') }}" />
+<meta name="description" content="{{ env('DESCRIPTION') }}">
+<link rel="icon" type="image/png" href="{{ asset(env('ICON')) }}">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Document title -->
-<title>@yield('judul') | Stasiun Meteorologi Maritim Pontianak</title>
+<title>@yield('judul') | BMKG - {{ env('NAMA_KANTOR') }}</title>
 <!-- Stylesheets & Fonts -->
-<link href="css/plugins.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/custom.css" rel="stylesheet">
+<link href="{{ asset('frontend/css/plugins.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -32,10 +32,11 @@
     <!-- Scroll top -->
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
     <!--Plugins-->
-    <script src="js/jquery.js"></script>
-    <script src="js/plugins.js"></script>
+    <script src="{{ asset('frontend/js/jquery.js') }}"></script>
+    <script src="{{ asset('frontend/js/plugins.js') }}"></script>
     <!--Template functions-->
-    <script src="js/functions.js"></script>
+    <script src="{{ asset('frontend/js/functions.js') }}"></script>
+    <script src="https://kit.fontawesome.com/a573f99059.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

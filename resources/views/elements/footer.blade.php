@@ -2,56 +2,42 @@
     <div class="footer-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <div class="widget">
-                        <div class="widget-title">Polo HTML5 Template</div>
-                        <p class="mb-5">Built with love in Fort Worth, Texas, USA<br> All rights reserved. Copyright © 2021. INSPIRO.</p>
-                        <a href="https://themeforest.net/item/polo-responsive-multipurpose-html5-template/13708923" class="btn btn-inverted" target="_blank">Purchase Now</a>
+                        <div id="logo" >
+                            <a href="{{ route('beranda') }}">
+                                   <img style="height:90px;" alt="Stasiun Meteorologi Maritim Pontianak" src="{{ asset('frontend/images/logo-bmkg-maritim-pontianak-putih.svg') }}" class="logo-default pb-4">
+                            </a>
+                        </div>
+                        
                     </div>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-8">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-4">
                             <div class="widget">
-                                <div class="widget-title">Discover</div>
-                                <ul class="list">
-                                    <li><a href="#">Features</a></li>
-                                    <li><a href="#">Layouts</a></li>
-                                    <li><a href="#">Corporate</a></li>
-                                    <li><a href="#">Updates</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">Customers</a></li>
+                                <div class="widget-title">LINK</div>
+                                <ul class="list-icon list-icon-arrow list-icon-colored ">
+                                    <li><a href="https://www.bmkg.go.id/">BMKG</a></li>
+                                    <li><a href="https://www.wmo.int/pages/prog/amp/mmop/index_en.html">WMO</a></li>
+                                    <li><a href="https://www.jcomm.info/">JCOMM</a></li>
+                                    <li><a href="https://www1.kaiho.mlit.go.jp/TUHO/vpage/visualpage_en.html?type=212&tana=170656">Navigational Warnings by NAVAREA XI</a></li>
+                                    <li><a href="https://www.gmdss.org/XI.html">Marine Weather Information by METAREA XI</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="widget">
-                                <div class="widget-title">Features</div>
-                                <ul class="list">
-                                    <li><a href="#">Layouts</a></li>
-                                    <li><a href="#">Headers</a></li>
-                                    <li><a href="#">Widgets</a></li>
-                                    <li><a href="#">Footers</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="widget">
-                                <div class="widget-title">Pages</div>
-                                <ul class="list">
-                                    <li><a href="#">Portfolio</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Shop</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="widget">
-                                <div class="widget-title">Support</div>
-                                <ul class="list">
-                                    <li><a href="#">Help Desk</a></li>
-                                    <li><a href="#">Documentation</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                        <div class="col-lg-8">
+                            <div class="widget" id="footer-background">
+                                <div class="widget-title">Hubungi Kami</div>
+                                <ul class="list-icon list-icon-colored">
+                                    <li><i class="fa fa-map-marker"></i>Jalan Pelabuhan Komplek Pelabuhan Dwikora Pontianak</li>
+                                    <li><i class="fas fa-brands fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=628989111213&text=Halo%20admin">0898-9111-213</a></li>
+                                    <li><i class="fa fa-phone"></i>(0561) 769906 </li>
+                                    <li><i class="fa fa-envelope"></i><a href="mailto:stamar.pontianak@bmkg.go.id">stamar.pontianak@bmkg.go.id</a></li>							
+                                    <li><i class="fa fa-twitter"></i><a href="https://twitter.com/bmkgmaritimpnk">bmkgmaritimpnk</a></li>						
+                                    <li><i class="fa fa-facebook-f"></i><a href="https://www.facebook.com/infobmkg.maritimkalbar/">infobmkg.maritimkalbar</a> </li>						
+                                    <li><i class="fa fa-instagram"></i><a href="https://www.instagram.com/infobmkg.maritimkalbar/">infobmkg.maritimkalbar</a> </li>
+        
                                 </ul>
                             </div>
                         </div>
