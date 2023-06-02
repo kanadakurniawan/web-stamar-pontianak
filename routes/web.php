@@ -19,4 +19,15 @@ Route::get('/', function () { return view('index'); })->name('beranda');
 Route::prefix('profil')->name('profil.')->group(function () {
     Route::get('/', function () { return view('profil.index'); })->name('index');
     Route::get('/sejarah', function () { return view('profil.sejarah'); })->name('sejarah');
+    Route::get('/visi-dan-misi', function () { return view('profil.visi-dan-misi'); })->name('visi-dan-misi');
+    Route::get('/tugas-dan-fungsi', function () { return view('profil.tugas-dan-fungsi'); })->name('tugas-dan-fungsi');
+    Route::get('/logo-dan-panji', function () { return view('profil.logo-dan-panji'); })->name('logo-dan-panji');
+    Route::get('/struktur-organisasi', function () { return view('profil.struktur-organisasi'); })->name('struktur-organisasi');
+    Route::get('/sdm', function () { return view('profil.sdm'); })->name('sdm');
+});
+
+# Admin
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', function () { return view('admin.index'); })->name('index');
+    Route::get('/sejarah', function () { return view('profil.sejarah'); })->name('sejarah');
 });
