@@ -5,3 +5,8 @@ a:not(.btn):not(.badge):hover, a:not(.btn):not(.badge):focus, a:not(.btn):not(.b
 #footer-background{background-image: url('https://maritim.kalbar.bmkg.go.id/images/world-map.png'); background-position: 50% 55px; background-repeat: no-repeat}
 .list-icon i {color: #72C02C;font-size: 15px;margin-right: 14px;margin-left: -20px;}
 #footer {color: #999999;}
+#page-title { clear: both; padding: 50px 0; background-color: #F2F2F4; position: relative; /* page header left*/ /* page header right*/ }
+.single-post .post-item .post-item-description { padding: 0px 0 22px 0; line-height: 28px; color: #676767; }
+.post-item-description>p{
+    text-align: justify;
+}

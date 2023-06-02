@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('beranda');
+Route::get('/', function () { return view('index'); })->name('beranda');
+
+# Profil
+Route::prefix('profil')->name('profil.')->group(function () {
+    Route::get('/', function () { return view('profil.index'); })->name('index');
+    Route::get('/sejarah', function () { return view('profil.sejarah'); })->name('sejarah');
+});
