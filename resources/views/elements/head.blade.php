@@ -17,4 +17,5 @@
     <link href="{{ asset('frontend/css/plugins.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
+    @yield('css-tambahan')
     </head>

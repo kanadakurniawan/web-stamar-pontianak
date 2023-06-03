@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RootController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { return view('index'); })->name('beranda');
+// Route::get('/', function () { return view('index'); })->name('beranda');
+Route::controller(RootController::class)->name('home.')->group(function () {
+    Route::get('/', 'index')->name('index');
+});
 
 # Profil
 Route::prefix('profil')->name('profil.')->group(function () {

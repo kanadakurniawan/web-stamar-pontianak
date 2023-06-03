@@ -5,7 +5,7 @@
                 <div class="col-lg-4">
                     <div class="widget">
                         <div id="logo" >
-                            <a href="{{ route('beranda') }}">
+                            <a href="{{ route('home.index') }}">
                                    <img style="height:90px;" alt="{{ env('NAMA_KANTOR') }}" src="{{ asset(env('LOGO_FOOTER')) }}" class="logo-default pb-4">
                             </a>
                         </div>

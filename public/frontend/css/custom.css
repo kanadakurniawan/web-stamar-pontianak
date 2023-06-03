@@ -7,6 +7,9 @@ a:not(.btn):not(.badge):hover, a:not(.btn):not(.badge):focus, a:not(.btn):not(.b
 #footer {color: #999999;}
 #page-title { clear: both; padding: 50px 0; background-color: #F2F2F4; position: relative; /* page header left*/ /* page header right*/ }
 .single-post .post-item .post-item-description { padding: 0px 0 22px 0; line-height: 28px; color: #676767; }
-.post-item-description>p{
-    text-align: justify;
-}
+.post-item-description>p{text-align: justify;}
+.carouselcuaca{background-image: url("https://maritim.kalbar.bmkg.go.id/images/cuaca/100-am.jpg");}
+.team-desc,.fa,.carouselcuaca,.team-desc>p,.team-desc>span,.team-desc>h3{color: #ffffff;}
+img.iconawan{height: 70px;}
+.headline h4 {font-size: 16px; margin-bottom: 20px; padding-bottom: 0px; display: inline-block; border-bottom: 2px solid #72c02c;}
+.flickity-button:hover { background-color: #72C02C; }

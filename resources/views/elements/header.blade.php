@@ -3,7 +3,7 @@
         <div class="container">
             <!--Logo-->
             <div id="logo">
-                <a href="{{ route('beranda') }}">
+                <a href="{{ route('home.index') }}">
                     <img alt="{{ env('NAMA_KANTOR') }}" src="{{ asset(env('LOGO')) }}" class="logo-default py-4">
                 </a>
             </div>
