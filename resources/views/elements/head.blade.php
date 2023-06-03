@@ -6,7 +6,13 @@
     <link rel="icon" type="image/png" href="{{ asset(env('ICON')) }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>@yield('judul') | BMKG - {{ env('NAMA_KANTOR') }}</title>
+    <title>
+        @if(request()->is('/'))
+            {{ env('NAMA_KANTOR') }}
+        @else
+            @yield('judul') | BMKG - {{ env('NAMA_KANTOR') }}
+        @endif        
+    </title>
     <!-- Stylesheets & Fonts -->
     <link href="{{ asset('frontend/css/plugins.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
