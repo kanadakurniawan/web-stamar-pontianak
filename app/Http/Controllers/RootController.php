@@ -8,6 +8,7 @@ class RootController extends Controller
 {
     public function index()
     {
+        // Widget Prakiraan Cuaca Pelabuhan
         $namaPelabuhan = ['Dwikora','PPN Pemangkat','Tarempa','Sintete','Sukabangun','PPP Sungai Rengas','PPP Teluk Batang','Tebas Kuala','Penagi','Letung','Kuala Maras','Pulau Laut','Sedanau','Pulau Tiga','Midai','Subi','Serasan','Rasau Jaya','Padang Tikar','Kijing International'];
 
         $files = [
@@ -39,6 +40,13 @@ class RootController extends Controller
             $dataPelabuhan[$i] = $data1['data'];
             $i++;
         }
-        return view('index', compact('dataPelabuhan','namaPelabuhan'));
+        // Widget Prakiraan Cuaca Pelabuhan END
+
+        // Widget Warning
+        $warningkalbar=simplexml_load_file("http://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/WarningsXML-Kalimantan_Barat.xml");
+        $warning = $warningkalbar->warnings->reports;
+        // Widget Warning END
+
+        return view('index', compact('dataPelabuhan','namaPelabuhan','warning'));
     }
 }
