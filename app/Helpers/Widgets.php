@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Helpers;
 
-use App\Helpers\Widgets;
-use Illuminate\Http\Request;
-
-class RootController extends Controller
-{
-    public function prakiraanCuacaPelabuhan()
-    {
+class Widgets{
+    function namaPelabuhan(){
         $namaPelabuhan = ['Dwikora','PPN Pemangkat','Tarempa','Sintete','Sukabangun','PPP Sungai Rengas','PPP Teluk Batang','Tebas Kuala','Penagi','Letung','Kuala Maras','Pulau Laut','Sedanau','Pulau Tiga','Midai','Subi','Serasan','Rasau Jaya','Padang Tikar','Kijing International'];
+        return $namaPelabuhan;
+    }
 
+    function prakiraanCuacaPelabuhan()
+    {
         $files = [
             'https://peta-maritim.bmkg.go.id/public_api/pelabuhan/0009_Dwikora.json',
             'https://peta-maritim.bmkg.go.id/public_api/pelabuhan/0309_PPN%20Pemangkat.json',
@@ -40,16 +39,16 @@ class RootController extends Controller
             $dataPelabuhan[$i] = $data1['data'];
             $i++;
         }
-        return view('index', compact('dataPelabuhan','namaPelabuhan'));
+        return $dataPelabuhan;
     }
 
-    public function warning(){
+    function warning(){
         $warningkalbar=simplexml_load_file("http://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/WarningsXML-Kalimantan_Barat.xml");
         $warning = $warningkalbar->warnings->reports;
         return $warning;
     } 
 
-    public function tanggal_indo($tanggal, $cetak_hari = false)
+    function tanggal_indo($tanggal, $cetak_hari = false)
     {
         $hari = array ( 1 =>    'Senin',
                     'Selasa',
@@ -81,11 +80,5 @@ class RootController extends Controller
             return $hari[$num] . ', ' . $tgl_indo;
         }
         return $tgl_indo;
-    }
-    public function index(Widgets $widget){
-        $dataPelabuhan= $widget->prakiraanCuacaPelabuhan();
-        $namaPelabuhan= $widget->namaPelabuhan();
-        
-        return view('index', compact('dataPelabuhan','namaPelabuhan'));
     }
 }

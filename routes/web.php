@@ -14,7 +14,6 @@ use App\Http\Controllers\RootController;
 |
 */
 
-// Route::get('/', function () { return view('index'); })->name('beranda');
 Route::controller(RootController::class)->name('home.')->group(function () {
     Route::get('/', 'index')->name('index');
 });

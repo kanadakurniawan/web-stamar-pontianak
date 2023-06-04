@@ -7,8 +7,8 @@ Beranda
 @section('konten')
 <section id="page-content">
 <div class="container">
-    {{-- <div class="row"> --}}
-        <div class="col-8">
+    <div class="row">
+        <div class="col-lg-8">
             <div class="headline">
                 <h4 >Prakiraan Cuaca Pelabuhan</h4>
             </div>
@@ -29,10 +29,12 @@ Beranda
                 <a href="{{ env('BANNER_HOMEPAGE_LINK') }}" target="_blank">
                     <img class="img-fluid" src="{{ asset(env('BANNER_HOMEPAGE')) }}" alt="">
                 </a>
-            </div>         
+            </div>
+            
+            
+        </div> 
+        <div class="col-lg-4">
         </div>
-        <div class="col-4">
-        {{-- </div> --}}
     </div>
 </div>
 </div>
