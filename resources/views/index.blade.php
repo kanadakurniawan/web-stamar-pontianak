@@ -5,7 +5,7 @@ Beranda
 @section('css-tambahan')
 @endsection
 @section('konten')
-<section id="page-content">
+<section id="page-content" class="pt-3">
 <div class="container">
     <div class="row">
         <div class="col-lg-8">
@@ -40,16 +40,16 @@ Beranda
             {{-- Warning Start --}}
             <div role="alert" class="alert alert-warning my-3">
                 <div class="row">
-                    <div class="col-md-2 py-3 rounded peringatandini-title">>
+                    <div class="col-md-2 py-2 rounded peringatandini-title">>
                         <p class="align-middle"><i class="fa fa-triangle-exclamation fa-2xl mx-auto d-block"></i></p>
                         <p class="align-middle"><strong> Peringatan Dini</strong></p>
                     </div>
-                    <div class="col-md-10 p-2 peringatandini carousel" data-dots="false" data-items="1" data-autoplay="true" data-autoplay-timeout="2000">
+                    <div class="col-md-10 pl-3 peringatandini carousel" data-dots="false" data-items="1" data-autoplay="true" data-autoplay-timeout="2000">
                         @for ($x = 0; $x <= 2; $x++) 
                         <div>
                             <strong>{{ $hariIndo[$x] }} | Kalimantan Barat</strong><br/>
-                            {{ $dataWarning->report[$x]->text }}
-                        </div>
+                            {{ $dataWarning->report[$x]->text }}                            
+                        </div> 
                         @endfor   
                     </div> 
                 </div>               
