@@ -13,3 +13,5 @@ a:not(.btn):not(.badge):hover, a:not(.btn):not(.badge):focus, a:not(.btn):not(.b
 img.iconawan{height: 70px;}
 .headline>h4 {font-size: 16px; margin-bottom: 20px; padding-bottom: 0px; display: inline-block; border-bottom: 2px solid #72c02c;}
 .flickity-button:hover { background-color: #72C02C; }
+.peringatandini,.peringatandini>p{color: #3C4043;font-size:12px;}
+.peringatandini-title,.peringatandini-title>p{font-size:12px; background-color: #832424; color: #fff; text-align: center;}
