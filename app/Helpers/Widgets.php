@@ -80,4 +80,13 @@ class Widgets{
         }
         return $tgl_indo;
     }
+
+    function gempa(){
+        $dataXML = ["https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.xml","https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.xml","https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml"]; 
+        
+        for ($i=0; $i < 3; $i++) { 
+            $gempa[]=simplexml_load_file($dataXML[$i]);
+        }
+        return $gempa;
+    }
 }

@@ -15,3 +15,11 @@ img.iconawan{height: 70px;}
 .flickity-button:hover { background-color: #72C02C; }
 .peringatandini,.peringatandini>p{color: #3C4043;font-size:12px;}
 .peringatandini-title,.peringatandini-title>p{font-size:12px; background-color: #832424; color: #fff; text-align: center;}
+.gempa{font-size: 12px; line-height: 1.4em;}
+.deskripsi-gempa{font-size: 13px;font-weight: bold;}
+.gempa>.judul-gempa{font-size: 13px;font-weight: bold;}
+.image-with-text {display: flex;align-items: center;}
+.image-with-text>span {margin-left: 7px;}
+.tabs .nav-tabs .nav-link.active { color: #fff; background-color: #72c02c; border-bottom: 2px solid #72c02c; }
+.tabs .nav-tabs .nav-link { color: #72c02c; padding: 5px 10px; }
+  

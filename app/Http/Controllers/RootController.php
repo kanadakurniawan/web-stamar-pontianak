@@ -18,6 +18,7 @@ class RootController extends Controller
         for ($x = 0; $x <= 2; $x++) {
             $hariIndo[] = $widget->tanggal_indo($hari[$x],true);
         }
-        return view('index', compact('dataPelabuhan','namaPelabuhan','dataWarning','hariIndo'));
+        $gempa = $widget->gempa();
+        return view('index', compact('dataPelabuhan','namaPelabuhan','dataWarning','hariIndo','gempa'));
     }
 }
