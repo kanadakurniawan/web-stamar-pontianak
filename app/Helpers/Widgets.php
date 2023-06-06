@@ -89,4 +89,21 @@ class Widgets{
         }
         return $gempa;
     }
+
+    function infoCuacaDwikora(){
+        $sumber = 'http://202.90.199.132/aws-new/data/station/latest/3000000011';
+        $konten = file_get_contents($sumber);
+        $data = json_decode($konten, true);
+        $infoCuacaDwikora = json_decode($konten, true);
+        // $infoCuacaDwikora = $data['aaData'];
+        return $infoCuacaDwikora;
+    }
+
+    function prakiraanCuacaDwikora(){
+        date_default_timezone_set('Asia/Jakarta');
+        $dwikora = file_get_contents("https://peta-maritim.bmkg.go.id/public_api/pelabuhan/0009_Dwikora.json");
+        $data1 = json_decode($dwikora, true);
+        $prakiraanCuacaDwikora = $data1['data'];
+        return $prakiraanCuacaDwikora;
+}
 }

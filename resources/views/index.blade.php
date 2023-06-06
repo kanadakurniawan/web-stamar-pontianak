@@ -140,5 +140,47 @@ Beranda
         </div>
     </div>
 </div>
+<div class="call-to-action p-t-30 p-b-30  mb-0 call-to-action-dark">
+    <div class="container infocuacadwikora">
+        <div class="row text-light">
+            <div class="col-md-4 mb-4 text-center" >
+                Info Cuaca Pelabuhan Dwikora Pontianak <br>
+                Update : {{ $infoCuacaDwikora['waktu'] }} UTC               
+            </div>	
+            <div class="col-6 col-lg-1 col-md-1 mb-2 text-center" >
+                <img src="https://maritim.kalbar.bmkg.go.id/images/suhu.png" width="40" height="40" data-toggle="tooltip" data-placement="left"  data-original-title="temperature" title="temperature"><br/>
+                {{ substr($infoCuacaDwikora['temp'],0,4) }} <sup>0</sup>C
+            </div>
+            <div class="col-6 col-lg-1 col-md-1 mb-2 text-center" >
+                <img src="https://maritim.kalbar.bmkg.go.id/images/arah.png" width="40" height="40" data-toggle="tooltip" data-placement="left"  data-original-title="wind dir" title="wind dir"><br/>
+                {{ $infoCuacaDwikora['winddir'] }}<sup>0</sup>
+            </div>
+            <div class="col-6 col-lg-1 col-md-1 mb-2 text-center" >
+                <img src="https://maritim.kalbar.bmkg.go.id/images/wind.png" width="40" height="40" data-toggle="tooltip" data-placement="left"  data-original-title="wind speed" title="wind speed"><br/>
+                {{ substr($infoCuacaDwikora['windspeed'],0,3) }} knot
+            </div>
+            <div class="col-6 col-lg-1 col-md-1 mb-2 text-center" >
+                <img src="https://maritim.kalbar.bmkg.go.id/images/rh.png" width="40" height="40" data-toggle="tooltip" data-placement="left"  data-original-title="humidity" title="humidity"><br/>
+                {{ substr($infoCuacaDwikora['rh'],0,2) }} %
+            </div>
+            <div class="col-6 col-lg-1 col-md-1 mb-2 text-center" >
+                <img src="https://maritim.kalbar.bmkg.go.id/images/tekanan.png" width="40" height="40" data-toggle="tooltip" data-placement="left"  data-original-title="pressure" title="pressure"><br/>
+                {{ substr($infoCuacaDwikora['pressure'],0,6) }} mb
+            </div>
+            <div class="col-6 col-lg-1 col-md-1 mb-2 text-center" >
+                <img src="https://maritim.kalbar.bmkg.go.id/images/tide.png" width="40" height="40" data-toggle="tooltip" data-placement="left"  data-original-title="water level" title="water level"><br/>
+                {{ substr($infoCuacaDwikora['waterlevel'],0,3) }} m
+            </div>                               
+            <div class="col-6 col-lg-1 col-md-1 mb-2 text-center" >
+                <img src="https://maritim.kalbar.bmkg.go.id/images/air.png" width="40" height="40" data-toggle="tooltip" data-placement="left"  data-original-title="water temp" title="water temp"><br/>
+                {{ substr($infoCuacaDwikora['watertemp'],0,4) }} <sup>0</sup>C
+            </div>
+            <div class="col-6 col-lg-1 col-md-1 mb-2 text-center" >
+                <img src="https://maritim.kalbar.bmkg.go.id/images/radiation.png" width="40" height="40" data-toggle="tooltip" data-placement="left"  data-original-title="solar radiation" title="solar radiation"><br/>
+                {{ substr($infoCuacaDwikora['solrad'],0,4) }} W/m
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 @endsection
