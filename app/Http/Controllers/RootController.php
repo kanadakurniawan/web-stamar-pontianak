@@ -20,7 +20,6 @@ class RootController extends Controller
             $hariIndo[] = $widget->tanggal_indo($hari[$x],true);
         }
 
-        $gempa = $widget->gempa();
         $infoCuacaDwikora = $widget->infoCuacaDwikora();
         $prakiraanCuacaDwikora = $widget->prakiraanCuacaDwikora();
 
@@ -33,7 +32,15 @@ class RootController extends Controller
         $valid_from = date("Y-m-d H:i", $time1);
         $valid_to = date("Y-m-d H:i", $time2);
         $high_tide_time = date("Y-m-d H:i", $time3);
+        //  Peringatan Dini
+        $peringatanDini = $widget->peringatanDini();        
+        $waktuutc1 = $peringatanDini[0]['valid_from'];
+        $waktuutc2 = $peringatanDini[0]['valid_to'];        
+        $waktu1 = strtotime($waktuutc1.' UTC');
+        $waktu2 = strtotime($waktuutc2.' UTC');        
+        $peringatan_dini_valid_from = date("Y-m-d H:i", $waktu1);
+        $peringatan_dini_valid_to = date("Y-m-d H:i", $waktu2);
 
-        return view('index', compact('dataPelabuhan','namaPelabuhan','dataWarning','hariIndo','gempa','infoCuacaDwikora','prakiraanCuacaDwikora','valid_from','valid_to','high_tide_time'));
+        return view('index', compact('dataPelabuhan','namaPelabuhan','dataWarning','hariIndo','infoCuacaDwikora','prakiraanCuacaDwikora','valid_from','valid_to','high_tide_time','peringatanDini','peringatan_dini_valid_from','peringatan_dini_valid_to'));
     }
 }

@@ -1,12 +1,9 @@
 <div id="topbar" class="dark topbar">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6">                
                 <ul class="top-menu">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Terms</a></li>
+                    <li><a>{{ $tanggal }}</a></li>
                 </ul>
             </div>
             <div class="col-md-6 d-none d-sm-block">

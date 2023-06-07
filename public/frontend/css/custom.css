@@ -23,4 +23,14 @@ img.iconawan{height: 70px;}
 .tabs .nav-tabs .nav-link.active { color: #fff; background-color: #72c02c; border-bottom: 2px solid #72c02c; }
 .tabs .nav-tabs .nav-link { color: #72c02c; padding: 5px 10px; }
 .infocuacadwikora .col-md-1{font-size: 12px;}
+.marquee {white-space: nowrap;overflow: hidden;box-sizing: border-box;}
+.marquee p { animation: marquee 15s linear infinite;}
+@keyframes marquee {0%   { transform: translate(0, 0); }100% { transform: translate(-100%, 0); }}
+.ac-title {
+    position: relative;
+    padding: 12px 15px;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 600;
+}
   

@@ -105,5 +105,12 @@ class Widgets{
         $data1 = json_decode($dwikora, true);
         $prakiraanCuacaDwikora = $data1['data'];
         return $prakiraanCuacaDwikora;
-}
+    }
+
+    function peringatanDini(){
+        $pontianak = file_get_contents("https://peta-maritim.bmkg.go.id/public_api/perairan/D.10_Perairan%20Pontianak%20-%20Mempawah.json");
+        $datapontianak = json_decode($pontianak, true);
+        $peringatanDini = $datapontianak['data'];
+        return $peringatanDini;
+    }
 }

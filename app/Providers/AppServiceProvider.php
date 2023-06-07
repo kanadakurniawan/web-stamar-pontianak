@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use App\Helpers\Widgets;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,8 +19,11 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function boot(Widgets $widget): void
     {
-        //
+        $tanggalTopBar = $widget->tanggal_indo(date('Y-m-d'),true);
+        $gempa = $widget->gempa();
+        View::share('tanggal', $tanggalTopBar);
+        View::share('gempa', $gempa);
     }
 }
