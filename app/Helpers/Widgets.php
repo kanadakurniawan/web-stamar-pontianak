@@ -113,4 +113,43 @@ class Widgets{
         $peringatanDini = $datapontianak['data'];
         return $peringatanDini;
     }
+
+    static function prakiraanCuacaKota(){
+        $kalbar=simplexml_load_file("http://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-KalimantanBarat.xml") or die("Error: Cannot create object");
+        $cuaca = $kalbar->forecast->area;
+        return $cuaca;
+    }
+
+    static function pilihWaktuPrakiraanKota(){
+        date_default_timezone_set("Asia/Jakarta");
+        $sekarang = date("H");
+        //Menentukan batas batas jamnya	
+        $batas01 = 7;
+        $batas02 = 13;
+        $batas03 = 19;
+        if ($sekarang < $batas01){ $waktu = 0; }
+        elseif ($sekarang >= $batas01 && $sekarang < $batas02) { $waktu = 1; }
+        elseif ($sekarang >= $batas02 && $sekarang < $batas03) { $waktu = 2; }
+        elseif ($sekarang >= $batas03) { $waktu = 3; }
+        else { $waktu = 0; }
+        return $waktu;
+    }
+    static function namaCuaca($weathernya){
+        if ( $weathernya == 0 ) { $namaCuaca = "Cerah";
+        } elseif ( $weathernya == 1 ) { $namaCuaca = "Cerah Berawan" ;
+        } elseif ( $weathernya == 2 ) { $namaCuaca = "Cerah Berawan" ;
+        } elseif ( $weathernya == 3 ) { $namaCuaca = "Berawan" ;
+        } elseif ( $weathernya == 4 ) { $namaCuaca = "Berawan Tebal" ;
+        } elseif ( $weathernya == 5 ) { $namaCuaca = "Udara Kabur"; 
+        } elseif ( $weathernya == 10 ) { $namaCuaca = "Asap" ;
+        } elseif ( $weathernya == 45 ) { $namaCuaca = "Kabut";
+        } elseif ( $weathernya == 60 ) { $namaCuaca = "Hujan Ringan";
+        } elseif ( $weathernya == 61 ) { $namaCuaca = "Hujan Sedang";
+        } elseif ( $weathernya == 63 ) { $namaCuaca = "Hujan Lebat";
+        } elseif ( $weathernya == 80 ) { $namaCuaca = "Hujan Lokal";
+        } elseif ( $weathernya == 95 ) { $namaCuaca = "Hujan Petir";
+        } elseif ( $weathernya == 97 ) { $namaCuaca = "Hujan Petir";
+        } else { $namaCuaca = ""; }
+        return $namaCuaca;
+    }
 }

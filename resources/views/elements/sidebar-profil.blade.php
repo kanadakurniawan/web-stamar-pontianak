@@ -44,134 +44,49 @@
     <!--end: widget newsletter-->
     <!--Tabs with Posts-->
     <div class="widget">
-        <div class="tabs">
-            <ul class="nav nav-tabs" id="tabs-posts" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#popular" role="tab" aria-controls="popular" aria-selected="true">Popular</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="false">Featured</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#recent" role="tab" aria-controls="recent" aria-selected="false">Recent</a>
-                </li>
-            </ul>
-            <div class="tab-content" id="tabs-posts-content">
-                <div class="tab-pane fade show active" id="popular" role="tabpanel" aria-labelledby="popular-tab">
-                    <div class="post-thumbnail-list">
-                        <div class="post-thumbnail-entry">
-                            <img alt="" src="images/blog/thumbnail/5.jpg">
-                            <div class="post-thumbnail-content">
-                                <a href="#">A true story, that never been told!</a>
-                                <span class="post-date"><i class="icon-clock"></i> 6m ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i>
-                                    Technology</span>
-                            </div>
-                        </div>
-                        <div class="post-thumbnail-entry">
-                            <img alt="" src="images/blog/thumbnail/6.jpg">
-                            <div class="post-thumbnail-content">
-                                <a href="#">Beautiful nature, and rare feathers!</a>
-                                <span class="post-date"><i class="icon-clock"></i> 24h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i>
-                                    Lifestyle</span>
-                            </div>
-                        </div>
-                        <div class="post-thumbnail-entry">
-                            <img alt="" src="images/blog/thumbnail/7.jpg">
-                            <div class="post-thumbnail-content">
-                                <a href="#">The most happiest time of the day!</a>
-                                <span class="post-date"><i class="icon-clock"></i> 11h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i>
-                                    Lifestyle</span>
-                            </div>
-                        </div>
+        <h4 class="widget-title">Prakiraan Cuaca Kota</h4>
+        <div class="carousel team-members team-members-shadow" data-dots="false" data-items="1" data-autoplay="true" data-autoplay-timeout="2000">
+            @php
+            $cuacaKota = Widgets::prakiraanCuacaKota();
+            $waktu = Widgets::pilihWaktuPrakiraanKota();
+            $waktuPrakiraan = ["Pagi Hari","Siang Hari","Malam Hari","Dini Hari"];
+            @endphp
+            @foreach ($cuacaKota as $wil)
+            @php
+                $cuaca = $wil->parameter[6]->timerange[$waktu]->value[0];
+                $namaCuaca = Widgets::namaCuaca($cuaca);
+                $suhu = $wil->parameter[5]->timerange[0]->value[0];
+                $suhu01 = $wil->parameter[4]->timerange[0]->value;
+                $suhu02 = $wil->parameter[2]->timerange[0]->value;
+                $kelembaban = $wil->parameter[0]->timerange[0]->value;
+                $kelembaban01 = $wil->parameter[3]->timerange[0]->value;
+                $kelembaban02 = $wil->parameter[1]->timerange[0]->value;
+                $arahangin = $wil->parameter[7]->timerange[0]->value[1];
+                $kecepatanangin = $wil->parameter[8]->timerange[0]->value;
+            @endphp
+            <div class="py-4 text-center" style="background-image: url('https://maritim.kalbar.bmkg.go.id/images/cuaca/{{ $cuaca }}-am.jpg')">
+                <div class="text-light">
+                    <strong>{{ $waktuPrakiraan[$waktu] }}</strong>	
+                    <div>
+                        <i class="fa fa-map-marker"></i>&nbsp; {{ $wil->name }}
+                    </div>														
+                    <div class="icon mt-3">
+                        <img class="iconawan" alt="" src="https://maritim.kalbar.bmkg.go.id/images/cuaca/{{ $cuaca }}-am.png">                    
+                        <div class="mt-3">{{ $namaCuaca }}</div>
+                    </div>	                
+                    <div>
+                        <i class="fa fa-temperature-half"></i> {{ $suhu }} &#176C &nbsp; &nbsp; <i class="fa-solid fa-droplet"></i>{{ $kelembaban }} %
                     </div>
-                </div>
-                <div class="tab-pane fade" id="featured" role="tabpanel" aria-labelledby="featured-tab">
-                    <div class="post-thumbnail-list">
-                        <div class="post-thumbnail-entry">
-                            <img alt="" src="images/blog/thumbnail/6.jpg">
-                            <div class="post-thumbnail-content">
-                                <a href="#">Beautiful nature, and rare feathers!</a>
-                                <span class="post-date"><i class="icon-clock"></i> 24h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i>
-                                    Lifestyle</span>
-                            </div>
-                        </div>
-                        <div class="post-thumbnail-entry">
-                            <img alt="" src="images/blog/thumbnail/7.jpg">
-                            <div class="post-thumbnail-content">
-                                <a href="#">The most happiest time of the day!</a>
-                                <span class="post-date"><i class="icon-clock"></i> 11h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i>
-                                    Lifestyle</span>
-                            </div>
-                        </div>
-                        <div class="post-thumbnail-entry">
-                            <img alt="" src="images/blog/thumbnail/8.jpg">
-                            <div class="post-thumbnail-content">
-                                <a href="#">New costs and rise of the economy!</a>
-                                <span class="post-date"><i class="icon-clock"></i> 11h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i>
-                                    Lifestyle</span>
-                            </div>
-                        </div>
+                    <div>
+                        <i class="fa fa-wind"></i>&nbsp; {{ $kecepatanangin }} knot &nbsp;&nbsp;
+                        <i class="fa fa-compass"></i>&nbsp;{{ $arahangin }}
                     </div>
-                </div>
-                <div class="tab-pane fade" id="recent" role="tabpanel" aria-labelledby="recent-tab">
-                    <div class="post-thumbnail-list">
-                        <div class="post-thumbnail-entry">
-                            <img alt="" src="images/blog/thumbnail/7.jpg">
-                            <div class="post-thumbnail-content">
-                                <a href="#">The most happiest time of the day!</a>
-                                <span class="post-date"><i class="icon-clock"></i> 11h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i>
-                                    Lifestyle</span>
-                            </div>
-                        </div>
-                        <div class="post-thumbnail-entry">
-                            <img alt="" src="images/blog/thumbnail/8.jpg">
-                            <div class="post-thumbnail-content">
-                                <a href="#">New costs and rise of the economy!</a>
-                                <span class="post-date"><i class="icon-clock"></i> 11h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i>
-                                    Lifestyle</span>
-                            </div>
-                        </div>
-                        <div class="post-thumbnail-entry">
-                            <img alt="" src="images/blog/thumbnail/6.jpg">
-                            <div class="post-thumbnail-content">
-                                <a href="#">Beautiful nature, and rare feathers!</a>
-                                <span class="post-date"><i class="icon-clock"></i> 24h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i>
-                                    Lifestyle</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    
+                        
+                </div>									
+                    
             </div>
+            @endforeach
         </div>
     </div>
-    <!--End: Tabs with Posts-->
-    <!-- Twitter widget -->
- 
-    <!-- end: Twitter widget-->
-    <!--widget tags -->
-    <div class="widget  widget-tags">
-        <h4 class="widget-title">Tags</h4>
-        <div class="tags">
-            <a href="#">Design</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Digital</a>
-            <a href="#">Branding</a>
-            <a href="#">HTML</a>
-            <a href="#">Clean</a>
-            <a href="#">Peace</a>
-            <a href="#">Love</a>
-            <a href="#">CSS3</a>
-            <a href="#">jQuery</a>
-        </div>
-    </div>
-    <!--end: widget tags -->
 </div>

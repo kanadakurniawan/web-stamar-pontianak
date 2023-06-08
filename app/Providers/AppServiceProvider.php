@@ -23,7 +23,11 @@ class AppServiceProvider extends ServiceProvider
     {
         $tanggalTopBar = $widget->tanggal_indo(date('Y-m-d'),true);
         $gempa = $widget->gempa();
+        $cuaca = $widget->prakiraanCuacaKota();
+        $waktuPrakiraanCuacaKota = $widget->pilihWaktuPrakiraanKota();
         View::share('tanggal', $tanggalTopBar);
         View::share('gempa', $gempa);
+        View::share('cuacaKota', $cuaca);
+        View::share('waktuPrakiraanCuacaKota', $waktuPrakiraanCuacaKota);
     }
 }
