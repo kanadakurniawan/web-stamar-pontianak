@@ -1,4 +1,4 @@
-@extends('layouts.profil')
+@extends('layouts.sidebar-left')
 @section('judul')
 Visi dan Misi
 @endsection

@@ -28,7 +28,7 @@
                 <div class="container">
                     <nav>
                         <ul>
-                            <li class="dropdown"><a href="{{ route('profil.index') }}">Profil</a>
+                            <li class="dropdown"><a href="#">Profil</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{ route('profil.sejarah') }}">Sejarah</a></li>
                                     <li><a href="{{ route('profil.visi-dan-misi') }}">Visi dan Misi</a></li>
@@ -123,10 +123,10 @@
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#">Layanan Publik</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Maklumat Pelayanan</a></li>
-                                    <li><a href="#">Prosedur Pelayanan</a></li>
-                                    <li><a href="#">Tarif Produk</a></li>
+                                <ul class="dropdown-menu">                                    
+                                    <li> <a href="{{ route('layanan-publik.maklumat-pelayanan') }}">Maklumat Pelayanan</a> </li>
+                                    <li> <a href="{{ route('layanan-publik.prosedur-pelayanan') }}">Prosedur Pelayanan</a> </li>
+                                    <li> <a href="{{ route('layanan-publik.tarif-produk') }}">Tarif Produk</a> </li>
                                     <li><a href="#">Pelayanan Data Online</a></li>
                                 </ul>
                             </li>
@@ -142,14 +142,14 @@
                                     <li> <a href="https://maritim.kalbar.bmkg.go.id/konten/">Blog</a></li>									
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="#">Kuisioner</a>
+                            <li class="dropdown"><a href="">Kuisioner</a>
                                 <ul class="dropdown-menu">
-                                    <li> <a title="" href="https://maritim.kalbar.bmkg.go.id/kuisioner/kepuasan-masyarakat/">Kepuasan Masyarakat </a> </li>
-                                    <li> <a title="" href="https://maritim.kalbar.bmkg.go.id/kuisioner/persepsi-korupsi/">Persepsi Korupsi</a> </li>
+                                    <li> <a href="{{ route('kuisioner.kepuasan-masyarakat') }}">Kepuasan Masyarakat</a> </li>
+			                        <li> <a href="{{ route('kuisioner.persepsi-korupsi') }}">Persepsi Korupsi</a> </li>
                                 </ul>
                             </li>
                             <li>
-                            <li><a href="#">Hubungi Kami</a></li>
+                            <li><a href="{{ route('home.hubungi-kami') }}">Hubungi Kami</a></li>
                             <li>
                                 <img style="height:80px;" alt="Stasiun Meteorologi Maritim Pontianak" src="{{ asset('frontend/images/berakhlak-bangga-melayani-bangsa.png') }}" class="logo-default py-4">
                             </li>

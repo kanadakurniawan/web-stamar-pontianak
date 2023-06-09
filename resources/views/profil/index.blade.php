@@ -1,4 +1,4 @@
-@extends('layouts.profil')
+@extends('layouts.sidebar-left')
 @section('judul')
 Profil Stasiun Meteorologi Maritim Pontianak
 @endsection

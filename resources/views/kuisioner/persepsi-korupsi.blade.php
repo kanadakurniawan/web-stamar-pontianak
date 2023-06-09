@@ -1,6 +1,6 @@
 @extends('layouts.sidebar-left')
 @section('judul')
-Struktur Organisasi
+Persepsi Korupsi
 @endsection
 @section('konten')
 <div class="content col-lg-9">
@@ -10,7 +10,7 @@ Struktur Organisasi
         <div class="post-item">
             <div class="post-item-wrap">
                 <div class="post-item-description">
-                    <img src="{{ asset ('frontend/images/pages/struktur_organisasi.png') }}" class="img-fluid img-rounded" style="display: block; margin-left: auto; margin-right: auto;" width="552px" height="850px"> 
+                    
                 </div>
             </div>
         </div>

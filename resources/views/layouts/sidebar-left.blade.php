@@ -28,7 +28,14 @@
                     @yield('konten')
                     <!-- end: content -->
                     <!-- Sidebar-->
-                    @include('elements.sidebar-profil')
+                    @if(request()->is('profil*'))
+                        @include('elements.sidebar.profil')
+                    @elseif(request()->is('kuisioner*'))
+                        @include('elements.sidebar.kuisioner')
+                    @elseif(request()->is('layanan-publik*'))
+                        @include('elements.sidebar.layanan-publik')
+                    @endif  
+                    
                     <!-- end: sidebar-->
                 </div>
             </div>
