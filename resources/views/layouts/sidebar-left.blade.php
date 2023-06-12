@@ -28,12 +28,14 @@
                     @yield('konten')
                     <!-- end: content -->
                     <!-- Sidebar-->
-                    @if(request()->is('profil*'))
+                    @if($sidebar == 'profil')
                         @include('elements.sidebar.profil')
-                    @elseif(request()->is('kuisioner*'))
+                    @elseif($sidebar == 'kuisioner')
                         @include('elements.sidebar.kuisioner')
-                    @elseif(request()->is('layanan-publik*'))
+                    @elseif($sidebar == 'layanan-publik')
                         @include('elements.sidebar.layanan-publik')
+                    @elseif($sidebar == 'publikasi')
+                        @include('elements.sidebar.publikasi')
                     @endif  
                     
                     <!-- end: sidebar-->

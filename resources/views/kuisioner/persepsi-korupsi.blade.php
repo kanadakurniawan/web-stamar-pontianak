@@ -2,6 +2,9 @@
 @section('judul')
 Persepsi Korupsi
 @endsection
+@php
+$sidebar = 'kuisioner';
+@endphp
 @section('konten')
 <div class="content col-lg-9">
     <!-- Blog -->

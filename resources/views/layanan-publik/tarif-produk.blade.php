@@ -2,6 +2,9 @@
 @section('judul')
 Tarif Produk
 @endsection
+@php
+$sidebar = 'layanan-publik';
+@endphp
 @section('konten')
 <div class="content col-lg-9">
     <!-- Blog -->

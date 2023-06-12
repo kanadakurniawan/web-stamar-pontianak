@@ -2,6 +2,9 @@
 @section('judul')
 Sejarah
 @endsection
+@php
+$sidebar = 'profil';
+@endphp
 @section('konten')
 <div class="content col-lg-9">
     <!-- Blog -->

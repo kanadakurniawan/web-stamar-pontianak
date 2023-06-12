@@ -81,7 +81,7 @@ class Widgets{
         return $tgl_indo;
     }
 
-    function gempa(){
+    static function gempa(){
         $dataXML = ["https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.xml","https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.xml","https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml"]; 
         
         for ($i=0; $i < 3; $i++) { 

@@ -87,3 +87,18 @@ function show_tanggal()
     var TahunIni = sekarang.getFullYear();
     document.write(tglSekarang + " " + BulanIni + " " + TahunIni);
 }
+
+function tampilkan(){
+ 
+    var edisi=document.getElementById("edisi").value;
+    var thn=document.getElementById("thn").value;
+    var news=thn+edisi;
+    var issue=document.getElementById("issue");
+    var ddissue=document.getElementById("ddissue");
+    //var data=tahun+edisi;
+    if (edisi=="Januari" && thn=="2019")
+      {
+              issue.setAttribute("src","https://drive.google.com/file/d/1TGp2GW7qGtsV8TPFtQrJqZ62sCZd-sIC/preview");
+              ddissue.setAttribute("href","https://drive.google.com/file/d/1TGp2GW7qGtsV8TPFtQrJqZ62sCZd-sIC/view?usp=sharing");
+              document.getElementById("edi").innerHTML = "Buletin Maritim Edisi " + edisi +" Tahun "+ thn;
+      }

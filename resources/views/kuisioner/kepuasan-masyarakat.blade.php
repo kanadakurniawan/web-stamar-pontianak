@@ -2,6 +2,9 @@
 @section('judul')
 Kepuasan Masyarakat
 @endsection
+@php
+$sidebar = 'kuisioner';
+@endphp
 @section('konten')
 <div class="content col-lg-9">
     <!-- Blog -->
