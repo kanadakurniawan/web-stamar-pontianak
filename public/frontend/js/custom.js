@@ -102,3 +102,4 @@ function tampilkan(){
               ddissue.setAttribute("href","https://drive.google.com/file/d/1TGp2GW7qGtsV8TPFtQrJqZ62sCZd-sIC/view?usp=sharing");
               document.getElementById("edi").innerHTML = "Buletin Maritim Edisi " + edisi +" Tahun "+ thn;
       }
+    }

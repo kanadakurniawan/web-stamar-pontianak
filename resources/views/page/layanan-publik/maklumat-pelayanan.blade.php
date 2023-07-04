@@ -3,7 +3,7 @@
 Maklumat Pelayanan
 @endsection
 @php
-$sidebar = 'layanan-publik';
+$sidebar = 'layanan publik';
 @endphp
 @section('konten')
 <div class="content col-lg-9">

@@ -27,17 +27,8 @@
                     <!-- content -->
                     @yield('konten')
                     <!-- end: content -->
-                    <!-- Sidebar-->
-                    @if($sidebar == 'profil')
-                        @include('elements.sidebar.profil')
-                    @elseif($sidebar == 'kuisioner')
-                        @include('elements.sidebar.kuisioner')
-                    @elseif($sidebar == 'layanan-publik')
-                        @include('elements.sidebar.layanan-publik')
-                    @elseif($sidebar == 'publikasi')
-                        @include('elements.sidebar.publikasi')
-                    @endif  
-                    
+                    <!-- Sidebar-->                    
+                    @include('elements.sidebar')                    
                     <!-- end: sidebar-->
                 </div>
             </div>

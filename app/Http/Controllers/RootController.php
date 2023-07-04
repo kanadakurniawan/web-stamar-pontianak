@@ -41,6 +41,25 @@ class RootController extends Controller
         $peringatan_dini_valid_from = date("Y-m-d H:i", $waktu1);
         $peringatan_dini_valid_to = date("Y-m-d H:i", $waktu2);
 
-        return view('index', compact('dataPelabuhan','namaPelabuhan','dataWarning','hariIndo','infoCuacaDwikora','prakiraanCuacaDwikora','valid_from','valid_to','high_tide_time','peringatanDini','peringatan_dini_valid_from','peringatan_dini_valid_to'));
+        return view('page.index', compact('dataPelabuhan','namaPelabuhan','dataWarning','hariIndo','infoCuacaDwikora','prakiraanCuacaDwikora','valid_from','valid_to','high_tide_time','peringatanDini','peringatan_dini_valid_from','peringatan_dini_valid_to'));
+    }
+
+    function ganti($bulan) {
+        if ($bulan == 1) { return "Januari"; }
+        elseif ($bulan == 2) { return "Februari"; }
+        elseif ($bulan == 3) { return "Maret"; }
+        elseif ($bulan == 4) { return "April"; }
+        elseif ($bulan == 5) { return "Mei"; }
+        elseif ($bulan == 6) { return "Juni"; }
+        elseif ($bulan == 7) { return "Juli"; }
+        elseif ($bulan == 8) { return "Agustus"; }
+        elseif ($bulan == 9) { return "September"; }
+        elseif ($bulan == 10) { return "Oktober"; }
+        elseif ($bulan == 11) { return "November"; }
+        elseif ($bulan == 12) { return "Desember"; }
+    }
+    
+    public function buletin(){
+
     }
 }

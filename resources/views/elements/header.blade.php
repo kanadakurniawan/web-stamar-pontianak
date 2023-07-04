@@ -30,12 +30,7 @@
                         <ul>
                             <li class="dropdown"><a href="#">Profil</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ route('profil.sejarah') }}">Sejarah</a></li>
-                                    <li><a href="{{ route('profil.visi-dan-misi') }}">Visi dan Misi</a></li>
-                                    <li><a href="{{ route('profil.tugas-dan-fungsi') }}">Tugas dan Fungsi</a></li>
-                                    <li><a href="{{ route('profil.logo-dan-panji') }}">Logo dan Panji</a></li>
-                                    <li><a href="{{ route('profil.struktur-organisasi') }}">Struktur Organisasi</a></li>
-                                    <li><a href="{{ route('profil.sdm') }}">Sumber Daya Manusia</a></li>
+                                    @include('menu.profil')
                                 </ul>
                             </li>
                             <li class="dropdown mega-menu-item"><a href="#">Portfolio</a>
@@ -123,29 +118,18 @@
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#">Layanan Publik</a>
-                                <ul class="dropdown-menu">                                    
-                                    <li> <a href="{{ route('layanan-publik.maklumat-pelayanan') }}">Maklumat Pelayanan</a> </li>
-                                    <li> <a href="{{ route('layanan-publik.prosedur-pelayanan') }}">Prosedur Pelayanan</a> </li>
-                                    <li> <a href="{{ route('layanan-publik.tarif-produk') }}">Tarif Produk</a> </li>
-                                    <li><a href="#">Pelayanan Data Online</a></li>
+                                <ul class="dropdown-menu">      
+                                    @include('menu.layanan-publik')
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#">Publikasi</a>
                                 <ul class="dropdown-menu">
-                                    <li> <a href="https://maritim.kalbar.bmkg.go.id/transparansi-kinerja/">Transparansi Kinerja</a></li>
- 									<li> <a href="https://maritim.kalbar.bmkg.go.id/langganan/">Langganan Info Cuaca</a></li>
-                                    <li> <a href="https://maritim.kalbar.bmkg.go.id/buletin/">Buletin</a></li>
-                                    <li> <a href="https://maritim.kalbar.bmkg.go.id/ringkasan-cuaca/">Ringkasan Cuaca</a></li>
-                                    <li> <a href="https://maritim.kalbar.bmkg.go.id/infografis-rcb/">Infografis RCB</a></li>
-                                    <li> <a href="https://maritim.kalbar.bmkg.go.id/laporan/">Laporan</a></li>
-                                    <li> <a href="https://maritim.kalbar.bmkg.go.id/modul-web/">Modul Web</a></li>
-                                    <li> <a href="https://maritim.kalbar.bmkg.go.id/konten/">Blog</a></li>									
+                                    @include('menu.publikasi')			
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="">Kuisioner</a>
                                 <ul class="dropdown-menu">
-                                    <li> <a href="{{ route('kuisioner.kepuasan-masyarakat') }}">Kepuasan Masyarakat</a> </li>
-			                        <li> <a href="{{ route('kuisioner.persepsi-korupsi') }}">Persepsi Korupsi</a> </li>
+                                    @include('menu.kuisioner')
                                 </ul>
                             </li>
                             <li>
