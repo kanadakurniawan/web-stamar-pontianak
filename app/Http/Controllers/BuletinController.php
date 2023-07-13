@@ -13,7 +13,12 @@ class BuletinController extends Controller
      */
     public function index()
     {
-        //
+        // get all the sharks
+        $dataBuletin = buletin::all();
+
+        // load the view and pass the sharks
+        //return View::make('buletin.index')->with('buletin', $buletin);
+        return view('admin.buletin.index', compact('dataBuletin'));
     }
 
     /**
@@ -21,7 +26,7 @@ class BuletinController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.buletin.create');
     }
 
     /**

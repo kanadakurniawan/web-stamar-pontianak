@@ -1,4 +1,4 @@
-<div class="team-member pt-4 mb-3 carouselcuaca" style="background-image: url('{{ asset('frontend/images/widgets/prakiraan-cuaca-pelabuhan/background.jpg') }}')">
+<div class="team-member pt-4 mb-3 carouselcuaca rounded-3" style="background-image: url('{{ asset('frontend/images/widgets/prakiraan-cuaca-pelabuhan/background.jpg') }}')">
     <div class="team-image mb-0 mt-2">
         <div class="icon mb-0">
             <img alt="" src="{{ asset('frontend/images/widgets/prakiraan-cuaca-pelabuhan/icon') }}/{{ $cuaca }}.png" class="iconawan">									

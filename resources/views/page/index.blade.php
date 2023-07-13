@@ -32,15 +32,15 @@ Beranda
                 {{-- Banner Start --}}
                 <div class="row banner mb-3 mt-0">
                     <a href="{{ env('BANNER_HOMEPAGE_LINK') }}" target="_blank">
-                        <img class="img-fluid" src="{{ asset(env('BANNER_HOMEPAGE')) }}" alt="">
+                        <img class="img-fluid rounded-3" src="{{ asset(env('BANNER_HOMEPAGE')) }}" alt="">
                     </a>
                 </div>   
                 {{-- Banner End --}}
 
                 {{-- Warning Start --}}
-                <div role="alert" class="alert alert-warning my-3">
+                <div role="alert" class="alert alert-warning my-3 rounded-3">
                     <div class="row">
-                        <div class="col-md-2 py-2 rounded peringatandini-title">>
+                        <div class="col-md-2 py-2 rounded-3 peringatandini-title">>
                             <p class="align-middle"><i class="fa fa-triangle-exclamation fa-2xl mx-auto d-block"></i></p>
                             <p class="align-middle"><strong> Peringatan Dini</strong></p>
                         </div>
@@ -205,11 +205,11 @@ Beranda
                 <div class="px-2 pb-2">
                     Dikeluarkan oleh BMKG, berlaku mulai : {{ $peringatan_dini_valid_from }} WIB sampai dengan {{ $peringatan_dini_valid_to }} WIB 
                 </div>
-                <h5 class="mb-0 bg-info text-light p-2">Kondisi Sinoptik :</h5>
+                <h5 class="mb-0 bg-info text-light p-2 rounded-3 text-center">Kondisi Sinoptik</h5>
                 <div class="p-2">
                     {{ $peringatanDini[0]['weather_desc'] }}
                 </div>              
-                <h5 class="mb-0 bg-danger text-light p-2">Peringatan Dini :</h5>
+                <h5 class="mb-0 bg-danger text-light p-2 rounded-3 text-center">Peringatan Dini</h5>
                 <div class="p-2">
                     {{ $peringatanDini[0]['warning_desc'] }}
                 </div>
